@@ -1,0 +1,39 @@
+## SERVERLESS
+[Bb]in
+[Oo]bj
+[Tt]est[Rr]esults
+.vs
+*.mdf
+*.ldf
+*.suo
+*.user
+*.[Cc]ache
+*[Rr]esharper*
+packages
+NuGet.exe
+_[Ss]cripts
+*.exe
+*.dll
+*.nupkg
+*.ncrunchsolution
+*.dot[Cc]over
+*.pubxml
+*.zip
+*launchSettings.json
+
+## IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+.vscode/extensions.json
+
+## System Files
+.DS_Store
+Thumbs.db
