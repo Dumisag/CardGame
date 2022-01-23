@@ -22,13 +22,13 @@ namespace CardGame
 					case "0":
 						return;
 					case "1":
-						var  d = GameLogic.CreateNewDeckOfCards();
+						var  deckOfCards = GameLogic.CreateNewDeckOfCards();
 						var dealerCards = GameLogic.CreateDealerHand();
 						var playerCards = GameLogic.CreatePlayerHand();
-						GameLogic.HitCard(dealerCards, d.GetGameDeckOfCards());
-						GameLogic.HitCard(dealerCards, d.GetGameDeckOfCards());
-						GameLogic.HitCard(playerCards, d.GetGameDeckOfCards());
-						GameLogic.HitCard(playerCards, d.GetGameDeckOfCards());
+						GameLogic.HitCard(dealerCards, deckOfCards.GetGameDeckOfCards());
+						GameLogic.HitCard(dealerCards, deckOfCards.GetGameDeckOfCards());
+						GameLogic.HitCard(playerCards, deckOfCards.GetGameDeckOfCards());
+						GameLogic.HitCard(playerCards, deckOfCards.GetGameDeckOfCards());
 						int dealerHandSum = GameLogic.EvaluateHandCardSum(dealerCards);
 						int playerHandSum = GameLogic.EvaluateHandCardSum(playerCards);
 						Console.WriteLine("Your cards are:");
@@ -62,8 +62,8 @@ namespace CardGame
 								switch (ans)
 								{
 									case "h":
-										GameLogic.HitCard(playerCards, d.GetGameDeckOfCards());
-										GameLogic.HitCard(dealerCards, d.GetGameDeckOfCards());
+										GameLogic.HitCard(playerCards, deckOfCards.GetGameDeckOfCards());
+										GameLogic.HitCard(dealerCards, deckOfCards.GetGameDeckOfCards());
 
 										Console.WriteLine($"Your card: {playerCards[playerCards.Count - 1 ]}, sum: {GameLogic.EvaluateHandCardSum(playerCards)}");
 										Console.WriteLine($"Dealer's card: {dealerCards[dealerHandSum -1 ]}");
